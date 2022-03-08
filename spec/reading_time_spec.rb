@@ -32,6 +32,24 @@ RSpec.describe "calculate_reading_time method" do
     end
   end
 
+  context "between 400 and up to 600 words" do
+    it "given a string with 500 words it returns 3" do
+      result = calculate_reading_time("")
+      expect(result).to eq 3
+    end
+  end
 
+  context "10,000 words" do
+    it "given a string with 10,000 words it returns 50" do
+      result = calculate_reading_time("")
+      expect(result).to eq 50
+    end
+  end
 
+  context "20,000 words" do
+    it "given a string with 10,000 words it returns 50" do
+      result = calculate_reading_time("")
+      expect(result).to eq 100
+    end
+  end
 end
